@@ -1,0 +1,28 @@
+<!--아이디 중복확인 window 창-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function blankCheck(p) {
+            var id = p.id.value;
+            id = id.trim();
+            if (id.length < 4) {
+                alert("아이디는 4글자 이상 입력해주세요.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div style="text-align: center;">
+    <h3>아이디 중복확인</h3>
+    <form action="id_check_Proc.html" method="post" onsubmit="return blankCheck(this)">
+        아이디: <input type="text" name="id" autofocus>
+        <input type="submit" value="중복확인">
+    </form>
+</div>
+</body>
+</html>
