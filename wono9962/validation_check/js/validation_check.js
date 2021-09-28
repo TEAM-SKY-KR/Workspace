@@ -32,7 +32,7 @@ function validate() {
     var pwCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
     if (!pwCheck.test(pw.value)) {
-        alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
+        alert("비밀번호는 영문자+숫자+특수문자 조합이며, 8~25자리 가능합니다.");
         pw.focus();
         return false;
     }
