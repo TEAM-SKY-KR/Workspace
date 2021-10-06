@@ -9,20 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <?php
     include_once "../front/base/b_header.php"
     ?>
+
+<!--    메뉴 배경 색상-->
     <style>
-        .navbar{
+        .navbar {
             background-color: #4174B9;
         }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="..\front\img\logo.png" alt="" width="35" height="29">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -32,96 +35,43 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link py-3 rounded text-light" href="index.php"><i
-                                class="fas fa-home"></i></a></li>
-                <li class="nav-item"><a class="nav-link py-3 text-light" href="tourlist.html">대표 관광명소</a>
+            <ul class="navbar-nav ms-auto fs-5 fw-normal">  <!-- ms-auto: 오른쪽 정렬 / fs-5: 글씨 크기 -->
+                <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light" href="index.php">
+                        <i class="fas fa-home"></i>
+                        <span>메인</span>
+                    </a>
                 </li>
-                <li class="nav-item"><a class="nav-link py-3 text-light" href="#">스탬프</a></li>
-                <li class="nav-item"><a class="nav-link py-3 text-light" href="#">먹거리</a></li>
-                <li class="nav-item"><a class="nav-link py-3 text-light" href="login.html"><i
-                                class="fas fa-user-check"></i></a></li>
-                <li class="nav-item">
-                    <form class="d-flex input-group mx-0">
-                        <input class="form-control" type="search" placeholder="Search">
-                        <span class="input-group-text"><a class="nav-link rounded" href="#">
-                            <i class="fas fa-search text-dark"></i>
-                        </a></span>
-                    </form>
+                <li class="nav-item py-2 px-2">
+                    <a class="nav-link py-3 text-light" href="tourlist.html">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>관광지</span>
+                    </a>
+                </li>
+                <li class="nav-item py-2 px-2">
+                    <a class="nav-link py-3 text-light" href="#">
+                        <i class="fas fa-stamp"></i>
+                        <span>스탬프 적립</span>
+                    </a>
+                </li>
+                <li class="nav-item py-2 px-2"><a class="nav-link py-3 text-light" href="#">
+                        <i class="fas fa-store"></i>
+                        <span>주변 식당</span>
+                    </a>
+                </li>
+                <li class="nav-item py-2 px-2">
+                    <a class="nav-link py-3 text-light" href="login.html">
+                        <i class="fas fa-user-check"></i>
+                        <span>로그인</span>
+                    </a>
+                </li>
+                <li class="nav-item py-2 px-2"><a class="nav-link py-3 text-light" href="#">
+                        <i class="fas fa-search px-1"></i>
+                        <span>검색</span>
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-            <div>sr</div>
-
-        </div>
-    </div>
-</div>
 </body>
 </html>
