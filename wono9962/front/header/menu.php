@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+
+<!--    작업 다 하고 커밋 전에 지우기-->
     <?php
     include_once "../front/base/b_header.php"
     ?>
