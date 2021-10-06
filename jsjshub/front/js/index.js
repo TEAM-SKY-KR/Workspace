@@ -14,7 +14,7 @@ function printClock() {
     }
 
     if (currentSeconds >= 50) {// 50초 이상일 때 색을 변환해 준다.
-        currentSeconds = '<span style="color:#de1951;">' + currentSeconds + '</span>'
+        currentSeconds = currentSeconds ;
     }
     clock.innerHTML = currentHours + ":" + currentMinute + ":" + currentSeconds + amPm; //날짜를 출력해 줌
 
@@ -40,6 +40,25 @@ function current_date() {
     let month = now.getMonth();	// 월
     let date = now.getDate(); // 일
     date_now.innerHTML = month + "월" + date + "일" + " 오늘의 대구는 어디인가요?";
-    date_now_date.innerHTML = date+"일";
+    date_now_date.innerHTML = date + "일";
 
 }
+
+
+function create_map() {
+
+    let mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(35.8470666, 128.583532), // 지도의 중심좌표
+            level: 5 // 지도의 확대 레벨
+        };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    let map = new kakao.maps.Map(mapContainer, mapOption);
+
+}
+
+function del_console(){
+    console.clear();
+}
+

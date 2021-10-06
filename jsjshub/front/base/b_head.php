@@ -11,3 +11,6 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <!--    sweet alert2-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!--font-->
+<link rel="stylesheet" href="../front/css/main.css">
