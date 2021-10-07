@@ -27,9 +27,9 @@
 <?php
 include_once "../front/header/menu.php";
 ?>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-12 col-lg-4 mt-3">
+        <div class="col-12 mt-3">
             <!--            <h2 id="clock"></h2>-->
             <div class="d-flex">
                 <h3><span class="badge bg-warning" id="date_now_date"></span></h3>
@@ -38,22 +38,17 @@ include_once "../front/header/menu.php";
             <h2 id="date_now"></h2>
 
         </div>
-        <div class="col-12 col-lg-4 mt-3">
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-8 mb-3">
             <div class="input-group">
                 <input type="text" class="form-control fs-4" placeholder="검색">
                 <button class="btn" style="background-color: #4174B9;color: white"><i
-                            class="fas fa-search fa-2x"></i></button><!--색상-->
+                            class="fas fa-search fa-2x"></i></button>
             </div>
         </div>
-        <div class="col-12 col-lg-4 mt-3">
-            <h2 class="text-center" id="clock"></h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-6 mx-auto">
-            <div>
-
-            </div>
+        <div class="col-12 col-lg-4 mb-3">
+            <h2 class="text-center m-0" id="clock"></h2>
         </div>
     </div>
     <div class="row">
@@ -66,8 +61,17 @@ include_once "../front/header/menu.php";
             </div>
         </div>
         <div class="col-12 col-lg-4 mb-3">
-            <div class="border bg-light">
-                리스트
+            <div class="border bg-light list_border">
+                <ul class="list-group list-group-flush">
+                    <a href="" style="text-decoration: none"><li class="list-group-item">동구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">서구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">남구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">북구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">중구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">달서구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">수성구</li></a>
+                    <a href="" style="text-decoration: none"><li class="list-group-item">달성군</li></a>
+                </ul>
             </div>
         </div>
     </div>
