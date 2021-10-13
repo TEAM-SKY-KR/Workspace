@@ -51,8 +51,14 @@ include_once "../front/header/menu.php";
             </div>
         </div>
         <div class="col-12 col-lg-4 mb-3">
-            <div class="border bg-light">
-                <h2 class="text-center m-0 mt-1" id="clock"></h2>
+            <div class="border bg-warning">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex ms-3">
+                        <img src="http://openweathermap.org/img/wn/04d.png" alt="">
+                        <h2 class="m-0 mt-1 align-self-center" id="temp"></h2>
+                    </div>
+                    <h2 class=" m-0 mt-1 align-self-center me-3" id="clock"></h2>
+                </div>
             </div>
         </div>
     </div>
@@ -109,10 +115,7 @@ include_once "../front/header/menu.php";
         },
         success: function (data) {
             // alert("통신데이터 값 : " + data) ;
-            alert(Math.floor(data.main.temp - 273.15));
-            alert( data.weather[0].descriptionmain);
-            alert(data.clouds.all + "%");
-            alert(data.weather[0].main);
+            document.getElementById("temp").innerHTML = Math.floor(data.main.temp - 273.15) + "°";
 
 
         }
