@@ -17,13 +17,13 @@
 
 </head>
 <div class="container-fluid">
-    <div class="row mb-5">
+    <div class="row mb-2">
         <div class="col-12">
-            <h2 class="page-section-heading text-center">로그인</h2>
+            <h3 class="page-section-heading text-center">서비스를 이용하기 위해서는 로그인이 필요합니다.</h3>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-xl-5">
+    <div class="row justify-content-center ">
+        <div class="col-xl-5 border border-1 p-4 rounded-3">
             <div class="row">
                 <div class="col-xl-8"> <!-- col-xl-8: PC grid-->
                     <form id="contactForm">
@@ -44,7 +44,7 @@
                     </form>
                 </div>
                 <div class="col-xl-4">  <!-- col-xl-4: PC grid-->
-                    <a class="btn rounded p-md-5 col-12 border-0 text-white fs-4"
+                    <a class="btn p-md-5 col-12 border-0 text-white fs-4"
                        href="#" onclick="validate()" style="background-color: #4174B9;">로그인</a>
                 </div>
             </div>
