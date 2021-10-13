@@ -19,6 +19,9 @@
     <script type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=102c7ab5e809721336bed57ec2e6db33"></script>
 
+    <!--    JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>
 <!--페이지 로드시 스크립트 작동-->
@@ -48,7 +51,9 @@ include_once "../front/header/menu.php";
             </div>
         </div>
         <div class="col-12 col-lg-4 mb-3">
-            <h2 class="text-center m-0" id="clock"></h2>
+            <div class="border bg-light">
+                <h2 class="text-center m-0 mt-1" id="clock"></h2>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -63,20 +68,56 @@ include_once "../front/header/menu.php";
         <div class="col-12 col-lg-4 mb-3">
             <div class="border bg-light list_border">
                 <ul class="list-group list-group-flush">
-                    <a href="" style="text-decoration: none"><li class="list-group-item">동구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">서구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">남구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">북구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">중구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">달서구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">수성구</li></a>
-                    <a href="" style="text-decoration: none"><li class="list-group-item">달성군</li></a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">동구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">서구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">남구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">북구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">중구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">달서구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">수성구</li>
+                    </a>
+                    <a href="" style="text-decoration: none">
+                        <li class="list-group-item">달성군</li>
+                    </a>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 <script>
+
+    $.ajax({
+
+        type: "GET",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=Daegu&appid=03375143ec4665f4db2e54c1d6138f6d",
+        dataType: "json",
+        error: function () {
+            alert('통신실패!!');
+        },
+        success: function (data) {
+            // alert("통신데이터 값 : " + data) ;
+            alert(Math.floor(data.main.temp - 273.15));
+            alert( data.weather[0].descriptionmain);
+            alert(data.clouds.all + "%");
+            alert(data.weather[0].main);
+
+
+        }
+
+    });
     del_console();
 </script>
 </body>
