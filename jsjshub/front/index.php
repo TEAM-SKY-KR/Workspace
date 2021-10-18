@@ -53,11 +53,11 @@ include_once "../front/header/menu.php";
         <div class="col-12 col-lg-4 mb-3">
             <div class="border bg-warning">
                 <div class="d-flex justify-content-between">
-                    <div class="d-flex ms-3">
-                        <img src="http://openweathermap.org/img/wn/04d.png" alt="">
+                    <div class="d-flex ms-4">
+                        <img src="" alt="" id="weather_img">
                         <h2 class="m-0 mt-1 align-self-center" id="temp"></h2>
                     </div>
-                    <h2 class=" m-0 mt-1 align-self-center me-3" id="clock"></h2>
+                    <h2 class=" m-0 mt-1 align-self-center me-5" id="clock"></h2>
                 </div>
             </div>
         </div>
@@ -102,6 +102,14 @@ include_once "../front/header/menu.php";
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <div class="border bg-light">
+                 ddfdf
+            </div>
+        </div>
+
+    </div>
 </div>
 <script>
 
@@ -116,6 +124,7 @@ include_once "../front/header/menu.php";
         success: function (data) {
             // alert("통신데이터 값 : " + data) ;
             document.getElementById("temp").innerHTML = Math.floor(data.main.temp - 273.15) + "°";
+            document.getElementById("weather_img").src="http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
 
         }

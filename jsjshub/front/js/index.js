@@ -14,7 +14,7 @@ function printClock() {
     }
 
     if (currentSeconds >= 50) {// 50초 이상일 때 색을 변환해 준다.
-        currentSeconds = currentSeconds ;
+        currentSeconds = currentSeconds;
     }
     clock.innerHTML = currentHours + ":" + currentMinute + ":" + currentSeconds + amPm; //날짜를 출력해 줌
 
@@ -37,7 +37,7 @@ function current_date() {
     let date_now = document.getElementById("date_now");
     let date_now_date = document.getElementById("date_now_date");
     let now = new Date();	// 현재 날짜 및 시간
-    let month = now.getMonth();	// 월
+    let month = now.getMonth() + 1;	// 월
     let date = now.getDate(); // 일
     date_now.innerHTML = month + "월" + date + "일" + " 오늘의 대구는 어디인가요?";
     date_now_date.innerHTML = date + "일";
@@ -58,7 +58,7 @@ function create_map() {
 
 }
 
-function del_console(){
+function del_console() {
     console.clear();
 }
 
