@@ -28,7 +28,6 @@
     </div>
     <div class="row">
         <div class="col-lg-5 mx-auto">
-
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="login_user" data-bs-toggle="tab"
