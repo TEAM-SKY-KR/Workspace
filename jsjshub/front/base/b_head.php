@@ -12,11 +12,5 @@
 <!--    sweet alert2-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!--font-->
-<link rel="stylesheet" href="../front/css/main.css">
-<!--위치 달라지면 경로도 달라짐-->
-
-
-
 <!--sweetalert2-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

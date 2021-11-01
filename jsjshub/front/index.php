@@ -13,7 +13,7 @@
     <script src="js/index.js"></script>
 
     <!--    index css-->
-    <link rel="stylesheet" href="../front/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <!--    지도api-->
     <script type="text/javascript"
@@ -22,6 +22,11 @@
     <!--    JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <!--font-->
+    <link rel="stylesheet" href="../front/css/main.css">
+    <!--위치 달라지면 경로도 달라짐-->
 
 </head>
 <!--페이지 로드시 스크립트 작동-->
@@ -51,7 +56,7 @@ include_once "../front/header/menu.php";
             </div>
         </div>
         <div class="col-12 col-lg-4 mb-3">
-            <div class="border bg-warning">
+            <div class="border bg-warning rounded">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex ms-4">
                         <img src="" alt="" id="weather_img">
@@ -64,7 +69,7 @@ include_once "../front/header/menu.php";
     </div>
     <div class="row">
         <div class="col-12 col-lg-8 mb-3">
-            <div class="border bg-light">
+            <div class="border bg-light rounded">
                 <div id="map"></div>
                 <script>
                     create_map();
@@ -72,7 +77,7 @@ include_once "../front/header/menu.php";
             </div>
         </div>
         <div class="col-12 col-lg-4 mb-3">
-            <div class="border bg-light list_border">
+            <div class="border bg-light list_border rounded">
                 <ul class="list-group list-group-flush">
                     <a href="" style="text-decoration: none">
                         <li class="list-group-item">동구</li>
@@ -112,7 +117,6 @@ include_once "../front/header/menu.php";
     </div>
 </div>
 <script>
-
     $.ajax({
 
         type: "GET",
@@ -125,7 +129,6 @@ include_once "../front/header/menu.php";
             // alert("통신데이터 값 : " + data) ;
             document.getElementById("temp").innerHTML = Math.floor(data.main.temp - 273.15) + "°";
             document.getElementById("weather_img").src="http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-
 
         }
 
