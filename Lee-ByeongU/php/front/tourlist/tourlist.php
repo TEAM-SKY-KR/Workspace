@@ -68,7 +68,7 @@
                                 <span class="ms-1">대구 달서구 두류공원로 200</span>
                             </div>
                             <div class="mt-2">
-                                <span class="pe-2"><i class="fas fa-home"></i></span>
+                                <span class="pe-2"><i class="fab fa-internet-explorer"></i></span>
                                 <span class="ms-1">
                                     <a href="#" class="text-decoration-none text-black">http://www.eworld.kr</a>
                                 </span>
