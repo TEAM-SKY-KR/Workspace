@@ -60,3 +60,6 @@ function validate() {
 
     // ++ 중복확인을 했는지 검사
 }
+
+
+

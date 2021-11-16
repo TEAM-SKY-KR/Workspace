@@ -44,7 +44,7 @@
 <!--                    </a>-->
 <!--                </li>-->
                 <li class="nav-item py-2 px-2">
-                    <a class="nav-link py-3 text-light" href="http://localhost/front/member/login/login.php">
+                    <a class="nav-link py-3 text-light" href="http://localhost/front/member/login/user_login.php">
                         <i class="fas fa-user-check"></i>
                         <span>로그인</span>
                     </a>
