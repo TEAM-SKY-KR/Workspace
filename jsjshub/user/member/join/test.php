@@ -13,7 +13,7 @@
     <script src="js/id_double_check.js"></script>
 
     <?php
-    include_once "../../front/base/b_head.php"
+    include_once "../../user/base/b_head.php"
     ?>
 
 </head>

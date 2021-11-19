@@ -14,7 +14,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://localhost/front">
+        <a class="navbar-brand" href="http://localhost/user">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -29,13 +29,13 @@ session_start();
                 if (isset($_SESSION["username"]) == true) {
                     ?>
                     <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"
-                                                      href="http://localhost/front">
+                                                      href="http://localhost/user">
                             <i class="fas fa-home"></i>
                             <span>메인</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/front/tourlist/tourlist.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/user/tourlist/tourlist.php">
                             <i class="fas fa-map-marked-alt"></i>
                             <span>관광지</span>
                         </a>
@@ -54,7 +54,7 @@ session_start();
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/front/member/logout/user_logout.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/logout/user_logout.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그아웃</span>
                         </a>
@@ -63,7 +63,7 @@ session_start();
                 }
                 else{?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/front/member/page/login_check.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/page/login_check.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>

@@ -15,7 +15,7 @@
     ?>
     <?php
     if (isset($_SESSION["username"]) == true) {
-        echo "<script>location.href='http://localhost/front/'</script>";
+        echo "<script>location.href='http://localhost/user/'</script>";
     }
     ?>
 
