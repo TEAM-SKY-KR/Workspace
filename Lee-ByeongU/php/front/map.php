@@ -75,10 +75,10 @@
             level: 3 // 지도의 확대 레벨
         };
 
-    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    // 커피숍 마커가 표시될 좌표 배열입니다
+   //************************************************************************
     var BukPositions = [
         new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
         new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
@@ -88,7 +88,8 @@
         new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
-    // 편의점 마커가 표시될 좌표 배열입니다
+
+    //************************************************************************
     var NamPositions = [
         new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
         new kakao.maps.LatLng(37.49671536281186, 127.03020491448352),
@@ -99,7 +100,7 @@
         new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
     ];
 
-    // 주차장 마커가 표시될 좌표 배열입니다
+    //************************************************************************
     var JungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
         new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
@@ -109,7 +110,7 @@
         new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
-
+    //************************************************************************
     var DongPositions = [
         new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
         new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
@@ -119,7 +120,7 @@
         new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
-
+    //************************************************************************
     var SeoPositions = [
         new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
         new kakao.maps.LatLng(37.49671536281186, 127.03020491448352),
@@ -129,7 +130,7 @@
         new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
         new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
     ];
-
+    //************************************************************************
     var SusungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
         new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
@@ -139,7 +140,7 @@
         new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
-
+    //************************************************************************
     var DalPositions = [
         new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
         new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
@@ -149,7 +150,7 @@
         new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
-
+    //************************************************************************
     var DalsungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
         new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
@@ -160,9 +161,14 @@
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
 
-    var markerImageSrc = './1.PNG';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
-    BukMarkers = [], // 커피숍 마커 객체를 가지고 있을 배열입니다
-        NamMarkers = [], // 편의점 마커 객체를 가지고 있을 배열입니다
+    //************************************************************************
+
+    //************************************************************************
+
+
+    var markerImageSrc = './1.PNG';
+    BukMarkers = [],
+        NamMarkers = [],
         JungMarkers = [],
         DongMarkers = [],
         SeoMarkers = [],
@@ -173,9 +179,9 @@
 
 
 
-    createBukMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
-    createNamMarkers(); // 편의점 마커를 생성하고 편의점 마커 배열에 추가합니다
-    createJungMarkers(); // 주차장 마커를 생성하고 주차장 마커 배열에 추가합니다
+    createBukMarkers();
+    createNamMarkers();
+    createJungMarkers();
     createDongMarkers();
     createSeoMarkers();
     createSusungMarkers();
@@ -183,16 +189,13 @@
     createDalsungMarkers();
 
 
-    changeMarker('Buk'); // 지도에 커피숍 마커가 보이도록 설정합니다
+    changeMarker('Buk');
 
-
-    // 마커이미지의 주소와, 크기, 옵션으로 마커 이미지를 생성하여 리턴하는 함수입니다
     function createMarkerImage(src, size, options) {
         var markerImage = new kakao.maps.MarkerImage(src, size, options);
         return markerImage;
     }
 
-    // 좌표와 마커이미지를 받아 마커를 생성하여 리턴하는 함수입니다
     function createMarker(position, image) {
         var marker = new kakao.maps.Marker({
             position: position,
@@ -202,7 +205,8 @@
         return marker;
     }
 
-    // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가하는 함수입니다
+    //************************************************************************
+
     function createBukMarkers() {
 
         for (var i = 0; i < BukPositions.length; i++) {
@@ -213,22 +217,21 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(BukPositions[i], markerImage);
 
-            // 생성된 마커를 커피숍 마커 배열에 추가합니다
             BukMarkers.push(marker);
         }
     }
 
-    // 커피숍 마커들의 지도 표시 여부를 설정하는 함수입니다
     function setBukMarkers(map) {
         for (var i = 0; i < BukMarkers.length; i++) {
             BukMarkers[i].setMap(map);
         }
     }
-    // 편의점 마커를 생성하고 편의점 마커 배열에 추가하는 함수입니다
+
+    //************************************************************************
+
     function createNamMarkers() {
         for (var i = 0; i < NamPositions.length; i++) {
 
@@ -238,23 +241,22 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(NamPositions[i], markerImage);
 
-            // 생성된 마커를 편의점 마커 배열에 추가합니다
             NamMarkers.push(marker);
         }
     }
 
-    // 편의점 마커들의 지도 표시 여부를 설정하는 함수입니다
+
     function setNamMarkers(map) {
         for (var i = 0; i < NamMarkers.length; i++) {
             NamMarkers[i].setMap(map);
         }
     }
 
-    // 주차장 마커를 생성하고 주차장 마커 배열에 추가하는 함수입니다
+    //************************************************************************
+
     function createJungMarkers() {
         for (var i = 0; i < JungPositions.length; i++) {
 
@@ -264,16 +266,13 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(JungPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             JungMarkers.push(marker);
         }
     }
 
-    // 주차장 마커들의 지도 표시 여부를 설정하는 함수입니다
     function setJungMarkers(map) {
         for (var i = 0; i < JungMarkers.length; i++) {
             JungMarkers[i].setMap(map);
@@ -290,11 +289,9 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(DongPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             DongMarkers.push(marker);
         }
     }
@@ -316,11 +313,9 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(SeoPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             SeoMarkers.push(marker);
         }
     }
@@ -342,11 +337,9 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(SusungPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             SusungMarkers.push(marker);
         }
     }
@@ -368,11 +361,9 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(DalPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             DalMarkers.push(marker);
         }
     }
@@ -394,11 +385,9 @@
                     spriteSize: new kakao.maps.Size(36, 98)
                 };
 
-            // 마커이미지와 마커를 생성합니다
             var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
                 marker = createMarker(DalsungPositions[i], markerImage);
 
-            // 생성된 마커를 주차장 마커 배열에 추가합니다
             DalsungMarkers.push(marker);
         }
     }
@@ -410,6 +399,8 @@
         }
     }
 
+    //************************************************************************
+    //************************************************************************
 
     function changeMarker(type) {
 
@@ -421,6 +412,8 @@
         var Susung = document.getElementById('Susung');
         var Dal = document.getElementById('Dal');
         var Dalsung = document.getElementById('Dalsung');
+
+        //************************************************************************
 
         if (type === 'Buk') {
 
@@ -443,6 +436,8 @@
             setDalMarkers(null);
             setDalsungMarkers(null);
 
+            //************************************************************************
+
         } else if (type === 'Nam') {
 
             Buk.className = '';
@@ -462,6 +457,8 @@
             setSusungMarkers(null);
             setDalMarkers(null);
             setDalsungMarkers(null);
+
+            //************************************************************************
 
         }  else if (type === 'Jung') {
 
@@ -483,6 +480,8 @@
             setDalMarkers(null);
             setDalsungMarkers(null);
 
+            //************************************************************************
+
         }  else if (type === 'Dong') {
 
             Buk.className = '';
@@ -503,6 +502,8 @@
             setDalMarkers(null);
             setDalsungMarkers(null);
 
+            //************************************************************************
+
         } else if (type === 'Seo') {
 
             Buk.className = '';
@@ -522,6 +523,9 @@
             setSusungMarkers(null);
             setDalMarkers(null);
             setDalsungMarkers(null);
+
+            //************************************************************************
+
         }  else if (type === 'Susung') {
 
             Buk.className = '';
@@ -541,6 +545,8 @@
             setSusungMarkers(map);
             setDalMarkers(null);
             setDalsungMarkers(null);
+
+            //************************************************************************
 
         }   else if (type === 'Dal') {
 
@@ -562,6 +568,8 @@
             setDalMarkers(map);
             setDalsungMarkers(null);
 
+            //************************************************************************
+
         }   else if (type === 'Dalsung') {
 
             Buk.className = '';
@@ -581,7 +589,6 @@
             setSusungMarkers(null);
             setDalMarkers(null);
             setDalsungMarkers(map);
-
         }
     }
 </script>
