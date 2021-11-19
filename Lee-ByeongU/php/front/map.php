@@ -150,14 +150,25 @@
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
 
+    var DalsungPositions = [
+        new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
+        new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
+        new kakao.maps.LatLng(37.49896834100913, 127.02833986892401),
+        new kakao.maps.LatLng(37.49893267508434, 127.02673400572665),
+        new kakao.maps.LatLng(37.49872543597439, 127.02676785815386),
+        new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
+        new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
+    ];
+
     var markerImageSrc = './1.PNG';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
     BukMarkers = [], // 커피숍 마커 객체를 가지고 있을 배열입니다
-    NamMarkers = [], // 편의점 마커 객체를 가지고 있을 배열입니다
-    JungMarkers = [],
+        NamMarkers = [], // 편의점 마커 객체를 가지고 있을 배열입니다
+        JungMarkers = [],
         DongMarkers = [],
         SeoMarkers = [],
         SusungMarkers = [],
-        DalMarkers = [];
+        DalMarkers = [],
+        DalsungMarkers = [];
 
 
 
@@ -169,6 +180,7 @@
     createSeoMarkers();
     createSusungMarkers();
     createDalMarkers();
+    createDalsungMarkers();
 
 
     changeMarker('Buk'); // 지도에 커피숍 마커가 보이도록 설정합니다
@@ -372,6 +384,32 @@
         }
     }
 
+    //************************************************
+    function createDalsungMarkers() {
+        for (var i = 0; i < DalsungPositions.length; i++) {
+
+            var imageSize = new kakao.maps.Size(22, 26),
+                imageOptions = {
+                    spriteOrigin: new kakao.maps.Point(10, 72),
+                    spriteSize: new kakao.maps.Size(36, 98)
+                };
+
+            // 마커이미지와 마커를 생성합니다
+            var markerImage = createMarkerImage(markerImageSrc, imageSize, imageOptions),
+                marker = createMarker(DalsungPositions[i], markerImage);
+
+            // 생성된 마커를 주차장 마커 배열에 추가합니다
+            DalsungMarkers.push(marker);
+        }
+    }
+
+
+    function setDalsungMarkers(map) {
+        for (var i = 0; i < DalsungMarkers.length; i++) {
+            DalsungMarkers[i].setMap(map);
+        }
+    }
+
 
     function changeMarker(type) {
 
@@ -382,121 +420,130 @@
         var Seo = document.getElementById('Seo');
         var Susung = document.getElementById('Susung');
         var Dal = document.getElementById('Dal');
+        var Dalsung = document.getElementById('Dalsung');
 
-        // 커피숍 카테고리가 클릭됐을 때
         if (type === 'Buk') {
 
-            // 커피숍 카테고리를 선택된 스타일로 변경하고
-            Buk.className = 'menu_selected';
 
-            // 편의점과 주차장 카테고리는 선택되지 않은 스타일로 바꿉니다
+            Buk.className = 'menu_selected';
             Nam.className = '';
             Jung.className = '';
             Dong.className = '';
             Seo.className = '';
             Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 커피숍 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(map);
             setNamMarkers(null);
             setJungMarkers(null);
             setDongMarkers(null);
             setSeoMarkers(null);
             setSusungMarkers(null);
+            setDalMarkers(null);
+            setDalsungMarkers(null);
 
-        } else if (type === 'Nam') { // 편의점 카테고리가 클릭됐을 때
+        } else if (type === 'Nam') {
 
-            // 편의점 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = 'menu_selected';
             Jung.className = '';
             Dong.className = '';
             Seo.className = '';
             Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 편의점 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(map);
             setJungMarkers(null);
             setDongMarkers(null);
             setSeoMarkers(null);
             setSusungMarkers(null);
+            setDalMarkers(null);
+            setDalsungMarkers(null);
 
-        }  else if (type === 'Jung') { // 주차장 카테고리가 클릭됐을 때
+        }  else if (type === 'Jung') {
 
-            // 주차장 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = '';
             Jung.className = 'menu_selected';
             Dong.className = '';
             Seo.className = '';
             Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 주차장 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(null);
             setJungMarkers(map);
             setDongMarkers(null);
             setSeoMarkers(null);
             setSusungMarkers(null);
+            setDalMarkers(null);
+            setDalsungMarkers(null);
 
         }  else if (type === 'Dong') {
 
-            // 주차장 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = '';
             Jung.className = '';
             Dong.className = 'menu_selected';
             Seo.className = '';
             Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 주차장 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(null);
             setJungMarkers(null);
             setDongMarkers(map);
             setSeoMarkers(null);
             setSusungMarkers(null);
+            setDalMarkers(null);
+            setDalsungMarkers(null);
 
         } else if (type === 'Seo') {
 
-            // 주차장 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = '';
             Jung.className = '';
             Dong.className = '';
             Seo.className = 'menu_selected';
             Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 주차장 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(null);
             setJungMarkers(null);
             setDongMarkers(null);
             setSeoMarkers(map);
             setSusungMarkers(null);
-
+            setDalMarkers(null);
+            setDalsungMarkers(null);
         }  else if (type === 'Susung') {
 
-            // 주차장 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = '';
             Jung.className = '';
             Dong.className = '';
             Seo.className = '';
             Susung.className = 'menu_selected';
+            Dal.className = '';
+            Dalsung.className = '';
 
-            // 주차장 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(null);
             setJungMarkers(null);
             setDongMarkers(null);
             setSeoMarkers(null);
             setSusungMarkers(map);
+            setDalMarkers(null);
+            setDalsungMarkers(null);
 
         }   else if (type === 'Dal') {
 
-            // 주차장 카테고리를 선택된 스타일로 변경하고
             Buk.className = '';
             Nam.className = '';
             Jung.className = '';
@@ -504,8 +551,8 @@
             Seo.className = '';
             Susung.className = '';
             Dal.className = 'menu_selected';
+            Dalsung.className = '';
 
-            // 주차장 마커들만 지도에 표시하도록 설정합니다
             setBukMarkers(null);
             setNamMarkers(null);
             setJungMarkers(null);
@@ -513,6 +560,27 @@
             setSeoMarkers(null);
             setSusungMarkers(null);
             setDalMarkers(map);
+            setDalsungMarkers(null);
+
+        }   else if (type === 'Dalsung') {
+
+            Buk.className = '';
+            Nam.className = '';
+            Jung.className = '';
+            Dong.className = '';
+            Seo.className = '';
+            Susung.className = '';
+            Dal.className = '';
+            Dalsung.className = 'menu_selected';
+
+            setBukMarkers(null);
+            setNamMarkers(null);
+            setJungMarkers(null);
+            setDongMarkers(null);
+            setSeoMarkers(null);
+            setSusungMarkers(null);
+            setDalMarkers(null);
+            setDalsungMarkers(map);
 
         }
     }
