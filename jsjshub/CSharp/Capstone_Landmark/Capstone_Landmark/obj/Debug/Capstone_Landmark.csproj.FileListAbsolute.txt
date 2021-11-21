@@ -1,0 +1,11 @@
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\bin\Debug\Capstone_Landmark.exe.config
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\bin\Debug\Capstone_Landmark.exe
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\bin\Debug\Capstone_Landmark.pdb
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.Properties.Resources.resources
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.exe
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.pdb
+C:\Users\USER\source\repos\Capstone_Landmark\Capstone_Landmark\obj\Debug\Capstone_Landmark.Form1.resources
