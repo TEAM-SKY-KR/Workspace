@@ -37,15 +37,16 @@ namespace Capstone_Landmark
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             int count = 0;
             for (int i = 1; i <= 25; i++)
             {
+
                 //httprequest 받아오기
                 string url = "https://tour.daegu.go.kr/index.do?menu_id=00002943";
                 string temp = HttpRequest.Result_Post(url, i);
 
 
-                Console.WriteLine(count);
                 //이미지분류
                 Regex reg = new Regex(@"<imgsrc=""/icms/tour(.+)""alt=");
                 MatchCollection resultColl = reg.Matches(temp.Replace(" ", String.Empty));
@@ -55,7 +56,7 @@ namespace Capstone_Landmark
                 foreach (Match mm in resultColl)
                 {
                     image_url.Add("https://tour.daegu.go.kr/icms/tour" + mm.Groups[1].ToString().Trim());
-                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    //Console.WriteLine(mm.Groups[1].ToString().Trim());
                 }
 
                 //관광지분류
@@ -79,8 +80,10 @@ namespace Capstone_Landmark
                 foreach (Match mm in resultColl)
                 {
                     landmark_explain.Add(mm.Groups[1].ToString().Trim());
-                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    //Console.WriteLine(mm.Groups[1].ToString().Trim());
+
                 }
+
 
 
 
@@ -92,31 +95,30 @@ namespace Capstone_Landmark
                 foreach (Match mm in resultColl)
                 {
                     landmark_phone.Add(mm.Groups[1].ToString().Trim());
-                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    //Console.WriteLine(mm.Groups[1].ToString().Trim());
                 }
+
 
                 //관광지 주소
                 reg = new Regex(@"<span class=""adress"">(.+)</span>");
-                resultColl = reg.Matches(temp.Replace("\r",string.Empty));
+                resultColl = reg.Matches(temp.Replace("\r", string.Empty));
+
 
 
                 foreach (Match mm in resultColl)
                 {
-                    landmark_address.Add(mm.Groups[1].ToString().Trim());
-                    Console.WriteLine( mm.Groups[1].ToString().Trim());
+                    if (!mm.Groups[1].ToString().Trim().Contains("<a href="))
+                    {
+                        landmark_address.Add(mm.Groups[1].ToString().Trim());
+                        //Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    }
                 }
-                count++;
+
             }
-       
-            //for (int j = 0; j<image_url.Count; j++)
-            //{
-            //    string textValue = j + "번|"  + "|" + landmark_address[j] + "|" + landmark_phone[j] + "|" + image_url[j] + "|\n";
-            //    textBox1.AppendText(textValue);
-
-            //}
-
+         
 
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -125,7 +127,7 @@ namespace Capstone_Landmark
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+
 
         }
 
@@ -137,8 +139,25 @@ namespace Capstone_Landmark
         private void button2_Click_1(object sender, EventArgs e)
         {
             string url = "https://tour.daegu.go.kr/index.do?menu_id=00002943";
-            string temp = HttpRequest.Result_Post(url, 1);
-            Console.WriteLine(temp);
+            string temp = HttpRequest.Result_Post(url, 2);
+
+            //관광지 주소
+            Regex reg = new Regex(@"<span class=""adress"">(.+)</span>");
+            MatchCollection resultColl = reg.Matches(temp.Replace("\r", string.Empty));
+
+
+            foreach (Match mm in resultColl)
+            {
+
+
+                if (!mm.Groups[1].ToString().Trim().Contains("<a href="))
+                {
+                    landmark_address.Add(mm.Groups[1].ToString().Trim());
+                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                }
+
+
+            }
         }
     }
 }
