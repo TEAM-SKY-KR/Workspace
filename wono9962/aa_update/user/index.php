@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>위드대구</title>
     <?php
-    include_once "../front/base/b_head.php"
+    include_once "../user/base/b_head.php"
     ?>
     <!--    시간관련 스크립트-->
     <script src="js/index.js"></script>
@@ -25,7 +25,7 @@
 
 
     <!--font-->
-    <link rel="stylesheet" href="../front/css/main.css">
+    <link rel="stylesheet" href="../user/css/main.css">
     <!--위치 달라지면 경로도 달라짐-->
 
 </head>
@@ -33,7 +33,7 @@
 <body onload="current_date(); printClock();">
 <!--컨텐츠시작-->
 <?php
-include_once "../front/header/menu.php";
+include_once "../user/header/menu.php";
 ?>
 <div class="container">
     <div class="row">
