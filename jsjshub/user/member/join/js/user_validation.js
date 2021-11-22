@@ -4,7 +4,8 @@ function data_validation() {
     const email = document.getElementById("email");
     const pw = document.getElementById("pw");
     const pw2 = document.getElementById("pw2");
-    const check = document.getElementById("check");
+    const regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
 
     // 빈칸 확인
     if (id.value == "") {
@@ -15,7 +16,8 @@ function data_validation() {
         )
         id.focus();
         return;
-    } else if (email.value == "") {
+    }
+    if (email.value == "") {
         Swal.fire(
             '이메일오류!',
             '이메일을 입력해주세요!',
@@ -23,7 +25,17 @@ function data_validation() {
         )
         email.focus();
         return;
-    } else if (pw.value == "" || pw2.value == "") {
+    }
+    if (!regExp.test(email.value)) {
+        Swal.fire(
+            '이메일오류!',
+            '이메일이 형식이 올바르지 않습니다.',
+            'question'
+        )
+        email.focus();
+        return;
+    }
+    if (pw.value == "" || pw2.value == "") {
         Swal.fire(
             '비밀번호오류!',
             '비밀번호를 입력해주세요!',
@@ -31,7 +43,8 @@ function data_validation() {
         )
         pw.focus();
         return;
-    } else if (pw.value != pw2.value) {
+    }
+    if (pw.value != pw2.value) {
         Swal.fire(
             '비밀번호오류!',
             '비밀번호가 맞지 않습니다.',
@@ -54,24 +67,24 @@ function post_data() {
         dataType: 'text',
         success: function (data) {
 
-           if(data=="ok"){
-               Swal.fire({
-                   position: 'center',
-                   icon: 'success',
-                   title: '회원가입이 완료되었습니다.',
-                   showConfirmButton: false,
-                   timer: 500
-               })
-               setTimeout(function () {
-                   location.replace("../../index.php");
-               }, 540);
-           }else{
-               Swal.fire(
-                   '오류!',
-                   '이미 존재하는 아이디 입니다.',
-                   'error'
-               )
-           }
+            if (data == "ok") {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: '회원가입이 완료되었습니다.',
+                    showConfirmButton: false,
+                    timer: 500
+                })
+                setTimeout(function () {
+                    location.replace("../../index.php");
+                }, 540);
+            } else {
+                Swal.fire(
+                    '오류!',
+                    '이미 존재하는 아이디 입니다.',
+                    'error'
+                )
+            }
         }
     });
 }
