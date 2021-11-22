@@ -37,9 +37,9 @@ namespace Capstone_Landmark
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //12번 14번 오류
             int count = 0;
-            for (int i = 1; i <= 25; i++)
+            for (int i = 15; i <= 25; i++)
             {
 
                 //httprequest 받아오기
@@ -67,7 +67,7 @@ namespace Capstone_Landmark
                 foreach (Match mm in resultColl)
                 {
                     landmark_title.Add(mm.Groups[1].ToString().Trim());
-                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    //Console.WriteLine(landmark_title.Count+"번"+mm.Groups[1].ToString().Trim());
                 }
 
 
@@ -94,8 +94,16 @@ namespace Capstone_Landmark
 
                 foreach (Match mm in resultColl)
                 {
-                    landmark_phone.Add(mm.Groups[1].ToString().Trim());
-                    //Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    if (mm.Groups[1].ToString() == null)
+                    {
+                        landmark_phone.Add("번호없음");
+                    }
+                    else
+                    {
+                        landmark_phone.Add(mm.Groups[1].ToString().Trim());
+                    }
+
+                    Console.WriteLine(landmark_phone.Count + "번" + mm.Groups[1].ToString().Trim());
                 }
 
 
@@ -114,8 +122,21 @@ namespace Capstone_Landmark
                     }
                 }
 
+
             }
-         
+
+
+
+            for (int j = 0; j < landmark_phone.Count; j++)
+            {
+                using (StreamWriter outputFile = new StreamWriter(@"save.txt", true))
+                {
+                    outputFile.WriteLine(landmark_phone.Count+"번|"+landmark_title[j].ToString()+"|"+landmark_explain[j].ToString()+"|"+landmark_address[j].ToString()+"|"+landmark_phone[j].ToString()+"|"+image_url[j].ToString()+"|");
+                }
+
+
+            }
+
 
         }
 
@@ -139,25 +160,44 @@ namespace Capstone_Landmark
         private void button2_Click_1(object sender, EventArgs e)
         {
             string url = "https://tour.daegu.go.kr/index.do?menu_id=00002943";
-            string temp = HttpRequest.Result_Post(url, 2);
+            string temp = HttpRequest.Result_Post(url, 12);
 
             //관광지 주소
-            Regex reg = new Regex(@"<span class=""adress"">(.+)</span>");
+            Regex reg = new Regex(@"<span class=""adress1"">(.+)</span>");
             MatchCollection resultColl = reg.Matches(temp.Replace("\r", string.Empty));
 
-
+            Console.WriteLine(resultColl.Count);
             foreach (Match mm in resultColl)
             {
-
-
-                if (!mm.Groups[1].ToString().Trim().Contains("<a href="))
+                if (mm.Groups[1].ToString() == "")
                 {
-                    landmark_address.Add(mm.Groups[1].ToString().Trim());
-                    Console.WriteLine(mm.Groups[1].ToString().Trim());
+                    landmark_phone.Add("번호없음");
+                    Console.WriteLine(landmark_phone.Count + "번" + mm.Groups[1].ToString().Trim());
+                }
+                else
+                {
+                    landmark_phone.Add(mm.Groups[1].ToString().Trim());
+                    Console.WriteLine(landmark_phone.Count + "번" + mm.Groups[1].ToString().Trim());
                 }
 
 
             }
+
+
+            for (int j = 0; j < landmark_phone.Count; j++)
+            {
+                using (StreamWriter outputFile = new StreamWriter(@"save.txt", true))
+                {
+                    outputFile.WriteLine(landmark_phone[j].ToString());
+                }
+
+               
+            }
+
+
+
+
+
         }
     }
 }
