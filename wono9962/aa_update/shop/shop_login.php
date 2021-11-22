@@ -15,11 +15,11 @@
     }
     ?>
 </head>
-<body style="background-color: #4174B9;">  <!--#4174B9-->
+<body style="background-color: #4174b9d4;">  <!--#4174B9-->
 <div class="container">
     <div class="row">
-        <div class="col-12 mt-5 mb-5">
-            <h1 class="text-center text-white mt-5">위드 대구<span class="fs-6 badge bg-warning text-center text-black mx-1">매장용</span></h1>
+        <div class="col-12 mt-5 mb-4">
+            <h1 class="text-center text-white mt-5">위드 대구<span class="fs-6 badge bg-info text-center text-black mx-1">매장용</span></h1>
         </div>
     </div>
     <div class="row">
@@ -42,12 +42,12 @@
                         <div class="invalid-feedback" data-sb-feedback="pw:required">비밀번호를 입력해주세요.</div>
                     </div>
                     <div class="input-group mb-3 d-grid">
-                        <a class="btn btn-warning text-black"
+                        <a class="btn btn-info text-black"
                            href="#" onclick="data_validation();">로그인</a>
                     </div>
                 </form>
                 <div class="col-xl-12 text-center">
-                <span><a class="fw-bold text-warning" style="text-decoration: none;"
+                <span><a class="fw-bold" style="text-decoration: none;"
                          href="../join/shop_join.php">아직 회원이 아니신가요?</a></span>
                 </div>
             </div>
