@@ -112,6 +112,18 @@
         new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
     ];
 
+    var NampolygonPath = [
+        new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
+        new kakao.maps.LatLng(37.49671536281186, 127.03020491448352),
+        new kakao.maps.LatLng(37.496201943633714, 127.02959405469642),
+        new kakao.maps.LatLng(37.49640072567703, 127.02726459882308),
+        new kakao.maps.LatLng(37.49640098874988, 127.02609983175294),
+        new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
+        new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
+    ];
+
+    //************************************************************************
+
     // 주차장 마커가 표시될 좌표 배열입니다
     var JungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
@@ -123,6 +135,18 @@
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
 
+    var JungpolygonPath = [
+        new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
+        new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
+        new kakao.maps.LatLng(37.49896834100913, 127.02833986892401),
+        new kakao.maps.LatLng(37.49893267508434, 127.02673400572665),
+        new kakao.maps.LatLng(37.49872543597439, 127.02676785815386),
+        new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
+        new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
+    ];
+
+    //************************************************************************
+
     var DongPositions = [
         new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
         new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
@@ -132,6 +156,18 @@
         new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
+    var DongpolygonPath = [
+        new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
+        new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
+        new kakao.maps.LatLng(37.498553760499505, 127.02882598822454),
+        new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
+        new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
+        new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
+        new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
+    ];
+
+
+    //************************************************************************
 
     var SeoPositions = [
         new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
@@ -142,6 +178,17 @@
         new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
         new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
     ];
+    var SeopolygonPath = [
+        new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
+        new kakao.maps.LatLng(37.49671536281186, 127.03020491448352),
+        new kakao.maps.LatLng(37.496201943633714, 127.02959405469642),
+        new kakao.maps.LatLng(37.49640072567703, 127.02726459882308),
+        new kakao.maps.LatLng(37.49640098874988, 127.02609983175294),
+        new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
+        new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
+    ];
+
+    //************************************************************************
 
     var SusungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
@@ -152,6 +199,17 @@
         new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
+    var SusungpolygonPath = [
+        new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
+        new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
+        new kakao.maps.LatLng(37.49896834100913, 127.02833986892401),
+        new kakao.maps.LatLng(37.49893267508434, 127.02673400572665),
+        new kakao.maps.LatLng(37.49872543597439, 127.02676785815386),
+        new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
+        new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
+    ];
+
+    //************************************************************************
 
     var DalPositions = [
         new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
@@ -162,6 +220,17 @@
         new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
         new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
     ];
+    var DalpolygonPath = [
+        new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
+        new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
+        new kakao.maps.LatLng(37.498553760499505, 127.02882598822454),
+        new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
+        new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
+        new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
+        new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
+    ];
+
+    //************************************************************************
 
     var DalsungPositions = [
         new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
@@ -172,6 +241,17 @@
         new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
         new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
     ];
+    var DalsungpolygonPath = [
+        new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
+        new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
+        new kakao.maps.LatLng(37.49896834100913, 127.02833986892401),
+        new kakao.maps.LatLng(37.49893267508434, 127.02673400572665),
+        new kakao.maps.LatLng(37.49872543597439, 127.02676785815386),
+        new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
+        new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)
+    ];
+
+    //************************************************************************
 
     var markerImageSrc = './1.PNG';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
     BukMarkers = [], // 커피숍 마커 객체를 가지고 있을 배열입니다
@@ -183,11 +263,7 @@
         DalMarkers = [],
         DalsungMarkers = [];
 
-
-
-
     createBukMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
-    createBukPoly();
     createNamMarkers(); // 편의점 마커를 생성하고 편의점 마커 배열에 추가합니다
     createJungMarkers(); // 주차장 마커를 생성하고 주차장 마커 배열에 추가합니다
     createDongMarkers();
@@ -214,6 +290,7 @@
         });
 
         return marker;
+
     }
 
     // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가하는 함수입니다
@@ -243,18 +320,6 @@
         for (var i = 0; i < BukMarkers.length; i++) {
             BukMarkers[i].setMap(map);
 
-            var polygon = new kakao.maps.Polygon({
-                path:BukpolygonPath,
-                strokeWeight : 3,
-                strokeColor: '#39DE2A',
-                strokeOpacity: 0.8,
-                strokeStyle: 'longdash',
-                fillColor: '#A2FF99',
-                fillOpacity: 0.7
-            });
-
-            polygon.setMap(map);
-
         }
     }
     // 편의점 마커를 생성하고 편의점 마커 배열에 추가하는 함수입니다
@@ -280,6 +345,8 @@
     function setNamMarkers(map) {
         for (var i = 0; i < NamMarkers.length; i++) {
             NamMarkers[i].setMap(map);
+
+
         }
     }
 
@@ -472,6 +539,22 @@
             setDalMarkers(null);
             setDalsungMarkers(null);
 
+
+            Bukpolygon = new kakao.maps.Polygon({
+                path:BukpolygonPath,
+                strokeWeight : 3,
+                strokeColor: '#39DE2A',
+                strokeOpacity: 0.8,
+                strokeStyle: 'longdash',
+                fillColor: '#A2FF99',
+                fillOpacity: 0.7
+            });
+
+            Bukpolygon.setMap(map);
+            Nampolygon.setMap(null);
+            Jungpolygon.setMap(null);
+            Dongpolygon.setMap(null);
+
         } else if (type === 'Nam') {
 
             Buk.className = '';
@@ -491,6 +574,21 @@
             setSusungMarkers(null);
             setDalMarkers(null);
             setDalsungMarkers(null);
+
+            Nampolygon = new kakao.maps.Polygon({
+                path:NampolygonPath,
+                strokeWeight : 3,
+                strokeColor: '#39DE2A',
+                strokeOpacity: 0.8,
+                strokeStyle: 'longdash',
+                fillColor: '#A2FF99',
+                fillOpacity: 0.7
+            });
+
+            Bukpolygon.setMap(null);
+            Nampolygon.setMap(map);
+            Jungpolygon.setMap(null);
+            Dongpolygon.setMap(null);
 
         }  else if (type === 'Jung') {
 
@@ -512,6 +610,22 @@
             setDalMarkers(null);
             setDalsungMarkers(null);
 
+            Jungpolygon = new kakao.maps.Polygon({
+                path:JungpolygonPath,
+                strokeWeight : 3,
+                strokeColor: '#39DE2A',
+                strokeOpacity: 0.8,
+                strokeStyle: 'longdash',
+                fillColor: '#A2FF99',
+                fillOpacity: 0.7
+            });
+
+            Bukpolygon.setMap(null);
+            Nampolygon.setMap(null);
+            Jungpolygon.setMap(map);
+            Dongpolygon.setMap(null);
+
+
         }  else if (type === 'Dong') {
 
             Buk.className = '';
@@ -531,6 +645,21 @@
             setSusungMarkers(null);
             setDalMarkers(null);
             setDalsungMarkers(null);
+
+            Dongpolygon = new kakao.maps.Polygon({
+                path:DongpolygonPath,
+                strokeWeight : 3,
+                strokeColor: '#31B25A',
+                strokeOpacity: 0.8,
+                strokeStyle: 'longdash',
+                fillColor: '#A2FF70',
+                fillOpacity: 0.7
+            });
+
+            Bukpolygon.setMap(null);
+            Nampolygon.setMap(null);
+            Jungpolygon.setMap(null);
+            Dongpolygon.setMap(map);
 
         } else if (type === 'Seo') {
 
