@@ -15,17 +15,11 @@
     }
     ?>
 </head>
-<body style="background-color: #4174B9;">  <!--#4174B9-->
+<body style="background-color: #4174b9d4;">  <!--#4174B9-->
 <div class="container">
     <div class="row">
-        <div class="col-12 mt-5 mb-5">
-            <h1 class="text-center text-white">위드 대구</h1>
-
-        </div>
-    </div>
-    <div class="row mb-2">
-        <div class="col-12 mt-2">
-            <h3 class="page-section-heading text-center">서비스를 이용하기 위해서는 <br>로그인이 필요합니다.</h3>
+        <div class="col-12 mt-5 mb-4">
+            <h1 class="text-center text-white mt-5">위드 대구<span class="fs-6 badge bg-info text-center text-black mx-1">매장용</span></h1>
         </div>
     </div>
     <div class="row">
@@ -36,7 +30,6 @@
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-user-check"></i></span>
                         <input type="text" class="form-control" id="id" name="id" placeholder="아이디" aria-label="id"
                                data-sb-validations="required">
-
                         <div class="invalid-feedback" data-sb-feedback="id:required">아이디를 입력해주세요.</div>
                     </div>
 
@@ -49,8 +42,8 @@
                         <div class="invalid-feedback" data-sb-feedback="pw:required">비밀번호를 입력해주세요.</div>
                     </div>
                     <div class="input-group mb-3 d-grid">
-                        <a class="btn text-white"
-                           href="#" onclick="data_validation();" style="background-color: #4174B9;">로그인</a>
+                        <a class="btn btn-info text-black"
+                           href="#" onclick="data_validation();">로그인</a>
                     </div>
                 </form>
                 <div class="col-xl-12 text-center">

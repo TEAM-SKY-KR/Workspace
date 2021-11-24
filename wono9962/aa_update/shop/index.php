@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>위드대구</title>
     <?php
-    include_once "../../shop/base/b_head.php"
+    include_once "../shop/base/b_head.php"
     ?>
     <!--    시간관련 스크립트-->
-    <script src="../js/index.js"></script>
+    <script src="./js/index.js"></script>
 
     <!--    index css-->
     <link rel="stylesheet" href="../css/index.css">
@@ -29,32 +29,28 @@
 <body onload="current_date(); printClock();">
 <!--컨텐츠시작-->
 <?php
-include_once "../../shop/header/menu.php";
+include_once "../shop/header/menu.php";
 ?>
-<!--매장 이름-->
-<!--오늘 날짜-->
-<!--오늘의 QR 사용자 수-->
-<!--QR 코드-->
-
 <div class="container">
     <div class="row">
         <div class="col-12 mt-3">
             <!--            <h2 id="clock"></h2>-->
             <div class="d-flex">
-                <h3><span class="badge bg-warning" id="date_now_date"></span></h3>
+                <h3><span class="badge bg-info " id="date_now_date"></span></h3>
+                <h2>&nbspWith Daegu!</h2>
             </div>
-            <h2 id="date_now"></h2>  <!--위드대구 사용자 수는 00명 입니다! : 오늘 위드대구 QR을 찍은 사람의 수-->
+            <h2 id="date_now"></h2>  <!--오늘의 사용자 수는 00명 입니다! : 오늘 위드대구 QR을 찍은 사람의 수-->
         </div>
     </div>
     <div class="row">
         <div class="col-4 mb-2">
-            <div class="border bg-warning rounded">
+            <div class="border bg-info rounded">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex ms-4">
                         <img src="" alt="" id="weather_img">
                         <h2 class="m-0 mt-1 align-self-center" id="temp"></h2>
                     </div>
-                    <h2 class=" m-0 mt-1 align-self-center me-5" id="clock"></h2>
+                    <h2 class="m-0 mt-1 align-self-center me-5" id="clock"></h2>
                 </div>
             </div>
         </div>
@@ -68,7 +64,7 @@ include_once "../../shop/header/menu.php";
     </div>
     <div class="row">
         <div class="col-12 text-center">
-            <h2>이곳은 <span class="badge bg-success rounded-pill">동궁찜닭</span> 입니다.</h2>
+            <h2>이곳은 <span class="badge bg-info rounded-pill">동궁찜닭</span> 입니다.</h2>
         </div>
     </div>
 </div>

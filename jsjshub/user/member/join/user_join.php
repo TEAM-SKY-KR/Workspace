@@ -48,7 +48,7 @@ include_once "../../header/menu.php";
                     <!--이메일-->
                     <div class="input-group mb-3">
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-envelope"></i></span>
-                        <input type="password" class="form-control rounded-end" id="email" name="email" placeholder="이메일"
+                        <input type="email" class="form-control rounded-end" id="email" name="email" placeholder="이메일"
                                aria-label="pw"
                                data-sb-validations="required">
                         <div class="invalid-feedback" data-sb-feedback="pw:required">비밀번호를 입력해주세요.</div>

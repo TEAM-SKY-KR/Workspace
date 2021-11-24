@@ -28,10 +28,15 @@ session_start();
                 <?php
                 if (isset($_SESSION["username"]) == true) {
                     ?>
-                    <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"
-                                                      href="http://localhost/user">
-                            <i class="fas fa-home"></i>
-                            <span>메인</span>
+<!--                    <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"-->
+<!--                                                      href="http://localhost/user">-->
+<!--                            <i class="fas fa-home"></i>-->
+<!--                            <span>메인</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                    <li class="nav-item py-2 px-2">
+                        <a class="nav-link py-3 text-light" href="#">
+                            <span>[<?= $_SESSION["username"] ?>]님</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
@@ -42,15 +47,9 @@ session_start();
                     </li>
                     <li class="nav-item py-2 px-2">
                         <a class="nav-link py-3 text-light" href="#"
-                           onclick="window.open('stamp/stamp.php', 'z','width=500, height=500'); return false">
+                           onclick="window.open('http://localhost/user/stamp/stamp.php', 'z','width=500, height=500'); return false">
                             <i class="fas fa-stamp"></i>
                             <span>스탬프 적립</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="#">
-                            <i class="fas fa-user-check"></i>
-                            <span>내정보</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
@@ -60,15 +59,15 @@ session_start();
                         </a>
                     </li>
                     <?php
-                }
-                else{?>
+                } else {
+                    ?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/page/login_check.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/login/user_login.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>
                     </li>
-                <?php
+                    <?php
                 }
                 ?>
 

@@ -68,7 +68,7 @@ include_once "../user/header/menu.php";
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-8 mb-3">
+        <div class="col-12 mb-3">
             <div class="border bg-light rounded">
                 <div id="map"></div>
                 <script>
@@ -76,41 +76,41 @@ include_once "../user/header/menu.php";
                 </script>
             </div>
         </div>
-        <div class="col-12 col-lg-4 mb-3">
-            <div class="border bg-light list_border rounded">
-                <ul class="list-group list-group-flush">
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">동구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">서구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">남구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">북구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">중구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">달서구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">수성구</li>
-                    </a>
-                    <a href="" style="text-decoration: none">
-                        <li class="list-group-item">달성군</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
+<!--        <div class="col-12 col-lg-4 mb-3">-->
+<!--            <div class="border bg-light list_border rounded">-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">동구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">서구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">남구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">북구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">중구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">달서구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">수성구</li>-->
+<!--                    </a>-->
+<!--                    <a href="" style="text-decoration: none">-->
+<!--                        <li class="list-group-item">달성군</li>-->
+<!--                    </a>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
     <div class="row">
         <div class="col-12 mb-3">
             <div class="border bg-light">
-                 ddfdf
+                 관광지 무작위로 추천해줄 예정
             </div>
         </div>
 
