@@ -33,7 +33,7 @@ include_once "../shop/header/menu.php";
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-12 mt-3">
+        <div class="col-6 mt-3 mx-auto">
             <!--            <h2 id="clock"></h2>-->
             <div class="d-flex">
                 <h3><span class="badge bg-info " id="date_now_date"></span></h3>
@@ -43,7 +43,7 @@ include_once "../shop/header/menu.php";
         </div>
     </div>
     <div class="row">
-        <div class="col-4 mb-2">
+        <div class="col-4 mb-2 mx-auto">
             <div class="border bg-info rounded">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex ms-4">

@@ -1,10 +1,12 @@
 function data_validation() {
     // 빈칸 확인, 8자리 이상인지 확인  확인 하고 서버로 전송
     const id = document.getElementById("id");
-    const email = document.getElementById("email");
     const pw = document.getElementById("pw");
     const pw2 = document.getElementById("pw2");
+    const num = document.getElementById("num");
+    const phone = document.getElementById("phone");
     const check = document.getElementById("check");
+
 
     // 빈칸 확인
     if (id.value == "") {
@@ -14,15 +16,7 @@ function data_validation() {
             'question'
         )
         id.focus();
-        return;
-    } else if (email.value == "") {
-        Swal.fire(
-            '이메일오류!',
-            '이메일을 입력해주세요!',
-            'question'
-        )
-        email.focus();
-        return;
+        return 0;
     } else if (pw.value == "" || pw2.value == "") {
         Swal.fire(
             '비밀번호오류!',
@@ -35,6 +29,22 @@ function data_validation() {
         Swal.fire(
             '비밀번호오류!',
             '비밀번호가 맞지 않습니다.',
+            'question'
+        )
+        pw.focus();
+        return;
+    } else if (num.value == "") {
+        Swal.fire(
+            '사업자번호오류!',
+            '사업자번호를 입력해주세요!',
+            'question'
+        )
+        pw.focus();
+        return;
+    } else if (phone.value == "") {
+        Swal.fire(
+            '휴대폰번호오류!',
+            '휴대폰번호를 입력해주세요!',
             'question'
         )
         pw.focus();

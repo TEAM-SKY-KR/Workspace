@@ -26,9 +26,14 @@ include_once "../../header/menu.php";
 ?>
 <div class="container">
     <div class="row mb-2">
-        <div class="col-12 mt-2">
-            <h3 class="page-section-heading text-center">서비스를 이용하기 위해서는 <br>로그인이 필요합니다.</h3>
+        <div class="col-2 mt-2 mx-auto">
+            <div class="rounded-3 bg-info text-center text-white mx-3 py-1 px-1">매장용</div>
         </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-12 mt-2">
+            <h3 class="page-section-heading text-center">서비스를 이용하기 위해서는 <br> 로그인이 필요합니다.</h3>
+         </div>
     </div>
     <div class="row">
         <div class="col-lg-5 mx-auto">

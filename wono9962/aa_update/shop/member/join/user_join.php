@@ -79,7 +79,7 @@ include_once "../../header/menu.php";
 
                 <!--이미 회원인지 확인-->
                 <div class="mt-3 text-center">
-                    <span class="fs-6"><a class="fw-bold" href="../login/shop_login.php" style="text-decoration: none">이미 회원이신가요?</a></span>
+                    <span class="fs-6"><a class="fw-bold" href="../login/user_login.php" style="text-decoration: none">이미 회원이신가요?</a></span>
 
                 </div>
             </div>
