@@ -21,7 +21,7 @@
 
 
     <!--font-->
-    <link rel="stylesheet" href="../../shop/css/main.css">
+    <link rel="stylesheet" href="../shop/css/main.css">
     <!--위치 달라지면 경로도 달라짐-->
 
 </head>

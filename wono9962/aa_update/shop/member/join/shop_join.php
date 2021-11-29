@@ -7,18 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- validation check -->
-    <script src="js/user_validation.js"></script>
+    <script src="js/shop_validation.js"></script>
     <!--    <script type="text/javascript" src="js/validation_check.js"></script>-->
 
     <link rel="stylesheet" href="../../css/main.css">
     <?php
     include_once "../../base/b_head.php"
     ?>
-
-    <script>
-
-    </script>
-
 </head>
 <body>
 <?php

@@ -8,7 +8,7 @@ session_start();
 <!--    메뉴 배경 색상-->
 <style>
     .navbar {
-        background-color: #4174b9d4;  <!-- #4174B9 -->
+        background-color: #4174B9;
     }
 </style>
 

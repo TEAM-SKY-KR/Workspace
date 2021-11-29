@@ -5,8 +5,7 @@ function data_validation() {
     const pw2 = document.getElementById("pw2");
     const num = document.getElementById("num");
     const phone = document.getElementById("phone");
-    const check = document.getElementById("check");
-
+    const regPho = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
 
     // 빈칸 확인
     if (id.value == "") {
@@ -39,7 +38,7 @@ function data_validation() {
             '사업자번호를 입력해주세요!',
             'question'
         )
-        pw.focus();
+        num.focus();
         return;
     } else if (phone.value == "") {
         Swal.fire(
@@ -47,9 +46,21 @@ function data_validation() {
             '휴대폰번호를 입력해주세요!',
             'question'
         )
-        pw.focus();
+        phone.focus();
+        return;
+    } else if (!regPho.test(phone.value)){
+        Swal.fire(
+            '휴대폰번호오류!',
+            '휴대폰번호를 입력해주세요!',
+            'question'
+        )
+        phone.focus();
         return;
     } else {
+        Swal.fire(
+            '회원가입',
+            '성공!'
+        )
         post_data();
     }
 }
