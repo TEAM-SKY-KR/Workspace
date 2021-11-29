@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- validation check -->
-    <script src="js/tour_validation.js"></script>
+    <script src="js/landmark_validation.js"></script>
     <!--    <script type="text/javascript" src="js/validation_check.js"></script>-->
 
     <link rel="stylesheet" href="../css/main.css">
