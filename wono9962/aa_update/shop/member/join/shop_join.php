@@ -30,7 +30,7 @@ include_once "../../header/menu.php";
             <!--개인 로그인-->
             <div class="p-3">
                 <!--아이디-->
-                <form action="" name="user_register_form">
+                <form action="" name="shop_register_form">
                     <div class="input-group mb-3">
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-user-check"></i></span>
                         <input type="text" class="form-control" id="id"name="id" placeholder="아이디" aria-label="id"

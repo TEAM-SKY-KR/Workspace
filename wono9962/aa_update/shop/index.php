@@ -32,7 +32,7 @@
 include_once "../shop/header/menu.php";
 ?>
 <div class="container">
-    <div class="row">
+    <div class="row ms-4">
         <div class="col-6 mt-3 mx-auto">
             <!--            <h2 id="clock"></h2>-->
             <div class="d-flex">

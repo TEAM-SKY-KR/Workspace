@@ -15,7 +15,7 @@
     ?>
     <?php
     if (isset($_SESSION["username"]) == true) {
-        echo "<script>location.href='http://localhost/user/'</script>";
+        echo "<script>location.href='http://localhost/shop/'</script>";
     }
     ?>
 
@@ -38,7 +38,7 @@ include_once "../../header/menu.php";
     <div class="row">
         <div class="col-lg-5 mx-auto">
             <div class="p-3">
-                <form action="" name="user_login_form">
+                <form action="" name="shop_login_form">
                     <div class="input-group mb-3">
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-user-check"></i></span>
                         <input type="text" class="form-control" id="id" name="id" placeholder="아이디" aria-label="id"
@@ -62,7 +62,7 @@ include_once "../../header/menu.php";
                 </form>
                 <div class="col-xl-12 text-center">
                 <span><a class="fw-bold" style="text-decoration: none;"
-                         href="../join/user_join.php">아직 회원이 아니신가요?</a></span>
+                         href="../join/shop_join.php">아직 회원이 아니신가요?</a></span>
                 </div>
             </div>
         </div>

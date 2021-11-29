@@ -57,20 +57,16 @@ function data_validation() {
         phone.focus();
         return;
     } else {
-        Swal.fire(
-            '회원가입',
-            '성공!'
-        )
         post_data();
     }
 }
 
 
 function post_data() {
-    let queryString = $("form[name=user_register_form]").serialize();
+    let queryString = $("form[name=shop_register_form]").serialize();
     $.ajax({
         type: 'post',
-        url: 'user_join_data.php',
+        url: 'shop_join_data.php',
         data: queryString,
         dataType: 'text',
         success: function (data) {
@@ -103,7 +99,7 @@ function id_double_check() {
     let queryString = $("input[name=id]").serialize();
     $.ajax({
         type: 'post',
-        url: 'user_join_id.php',
+        url: 'shop_join_id.php',
         data: queryString,
         dataType: 'text',
         success: function (data) {
