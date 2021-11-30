@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', '0');
-include_once "../../base/setup2.php";
+include_once "../../base/setup.php";
 
 $id = $_POST["id"];
 $sql = "SELECT * FROM member_landmark WHERE username = '$id'";

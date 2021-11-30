@@ -41,6 +41,15 @@ include_once "../../header/menu.php";
                         <div class="invalid-feedback" data-sb-feedback="id:required">아이디를 입력해주세요.</div>
                     </div>
 
+                    <!--매장-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="width: 42px;"><i class="fas fa-store"></i></span>
+                        <input type="text" class="form-control rounded-end" id="shop" name="shop" placeholder="매장이름"
+                               aria-label="pw"
+                               data-sb-validations="required">
+                        <div class="invalid-feedback" data-sb-feedback="pw:required">비밀번호를 입력해주세요.</div>
+                    </div>
+
                     <!--비밀번호-->
                     <div class="input-group mb-3">
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-key"></i></span>

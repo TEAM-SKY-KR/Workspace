@@ -14,8 +14,8 @@
     include_once "../../base/b_head.php"
     ?>
     <?php
-    if (isset($_SESSION["username"]) == true) {
-        echo "<script>location.href='http://localhost/shop/'</script>";
+    if (isset($_SESSION["shop_username"]) == true) {
+        echo "<script>location.href='http://localhost/w/shop/'</script>";
     }
     ?>
 

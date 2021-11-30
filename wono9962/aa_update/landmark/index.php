@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,6 +32,11 @@
 <?php
 include_once "header/menu.php";
 ?>
+<?php
+if (isset($_SESSION["landmark_username"]) == false) {
+    echo "<script>location.href='http://localhost/w/landmark/member/login/landmark_login.php'</script>";
+}
+?>
 <div class="container">
     <div class="row ms-4">
         <div class="col-6 mt-3 mx-auto">
@@ -62,9 +68,19 @@ include_once "header/menu.php";
                  style="width:545px; height:545px;">
         </div>
     </div>
+    <?php
+    include_once "base/setup.php";
+    $id = $_SESSION["landmark_username"];
+    $sql = "SELECT * FROM member_landmark WHERE username = '$id'";
+    $result = mysqli_query($conn, $sql);
+
+
+    $row = mysqli_fetch_array($result);
+    $landmark = $row["landmark"];
+    ?>
     <div class="row">
         <div class="col-12 text-center">
-            <h2>이곳은 <span class="badge bg-danger rounded-pill">스파크랜드</span> 입니다.</h2>
+            <h2>이곳은 <span class="badge bg-danger rounded-pill"><?=$landmark?></span> 입니다.</h2>
         </div>
     </div>
 </div>

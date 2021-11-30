@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../user/css/main.css">
     <!--위치 달라지면 경로도 달라짐-->
 
+    <script src="js/search.js"></script>
 </head>
 <!--페이지 로드시 스크립트 작동-->
 <body onload="current_date(); printClock();">
@@ -49,11 +50,15 @@ include_once "../user/header/menu.php";
     </div>
     <div class="row">
         <div class="col-12 col-lg-8 mb-3">
-            <div class="input-group">
-                <input type="text" class="form-control fs-4" placeholder="검색">
-                <button class="btn" style="background-color: #4174B9;color: white"><i
-                            class="fas fa-search fa-2x"></i></button>
-            </div>
+            <form action="search/info.php" method="post">
+                <div class="input-group">
+
+                    <input type="text" class="form-control fs-4" placeholder="검색" id="search" name="search">
+                    <button class="btn" style="background-color: #4174B9;color: white" onclick="onsubmit();"><i
+                                class="fas fa-search fa-2x"></i></button>
+
+                </div>
+            </form>
         </div>
         <div class="col-12 col-lg-4 mb-3">
             <div class="border bg-warning rounded">
@@ -76,41 +81,77 @@ include_once "../user/header/menu.php";
                 </script>
             </div>
         </div>
-<!--        <div class="col-12 col-lg-4 mb-3">-->
-<!--            <div class="border bg-light list_border rounded">-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">동구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">서구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">남구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">북구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">중구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">달서구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">수성구</li>-->
-<!--                    </a>-->
-<!--                    <a href="" style="text-decoration: none">-->
-<!--                        <li class="list-group-item">달성군</li>-->
-<!--                    </a>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="col-12 col-lg-4 mb-3">-->
+        <!--            <div class="border bg-light list_border rounded">-->
+        <!--                <ul class="list-group list-group-flush">-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">동구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">서구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">남구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">북구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">중구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">달서구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">수성구</li>-->
+        <!--                    </a>-->
+        <!--                    <a href="" style="text-decoration: none">-->
+        <!--                        <li class="list-group-item">달성군</li>-->
+        <!--                    </a>-->
+        <!--                </ul>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
     <div class="row">
         <div class="col-12 mb-3">
+            <h3>오늘의 추천 관광지</h3>
             <div class="border bg-light">
-                 관광지 무작위로 추천해줄 예정
+                <div class="row">
+                    <?php
+                    include_once "base/setup.php";
+                    $set = rand(1, 200);
+                    $sql = "SELECT * FROM member_user_landmark LIMIT $set,4";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <div class="col-lg-3 mb-3">
+                            <div class="mb-3">
+                                <!-- Product image-->
+                                <img class="card-img-top rounded-top-3 w-100" src="tourlist/img/<?= $row["id"] ?>.png"
+                                     alt="..." style="height: 200px;">
+
+                                <!-- Product actions-->
+                                <div class="card-footer bg-dark rounded-bottom-3 w-100">
+                                    <div class="text-center">
+                                        <a class="text-decoration-none text-white" href="#">
+                                            <h5 class="mt-1"><?= $row["title"] ?></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <span class="pe-2"><i class="fas fa-phone"></i></span>
+                                <span class="ms-1"><?= $row["phone"] ?></span>
+                            </div>
+                            <div class="mt-2">
+                                <span class="pe-2"><i class="fas fa-map-marked-alt"></i></span>
+                                <span class="ms-1"><?= $row["address"] ?></span>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
 
@@ -128,7 +169,7 @@ include_once "../user/header/menu.php";
         success: function (data) {
             // alert("통신데이터 값 : " + data) ;
             document.getElementById("temp").innerHTML = Math.floor(data.main.temp - 273.15) + "°";
-            document.getElementById("weather_img").src="http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+            document.getElementById("weather_img").src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
         }
 

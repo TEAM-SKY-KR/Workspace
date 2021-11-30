@@ -1,6 +1,6 @@
 <?php
 //ini_set('display_errors', '0');
-include_once "../../base/setup2.php";
+include_once "../../base/setup.php";
 
 $id = $_POST["id"];
 $pw = $_POST["pw"];
@@ -16,7 +16,7 @@ if ($row["username"] == $id) {
     if (password_verify($pw, $row["pw"])) {
         echo "ok";
         session_start();
-        $_SESSION['username'] = $id;
+        $_SESSION["landmark_username"] = $id;
     } else {
         echo "no";
     }

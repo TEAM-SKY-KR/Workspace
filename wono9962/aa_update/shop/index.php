@@ -31,6 +31,11 @@
 <?php
 include_once "../shop/header/menu.php";
 ?>
+<?php
+if (isset($_SESSION["shop_username"]) == false) {
+    echo "<script>location.href='http://localhost/w/shop/member/login/shop_login.php'</script>";
+}
+?>
 <div class="container">
     <div class="row ms-4">
         <div class="col-6 mt-3 mx-auto">
@@ -62,9 +67,19 @@ include_once "../shop/header/menu.php";
                  style="width:545px; height:545px;">
         </div>
     </div>
+    <?php
+    include_once "base/setup.php";
+    $id = $_SESSION["shop_username"];
+    $sql = "SELECT * FROM member_shop WHERE username = '$id'";
+    $result = mysqli_query($conn, $sql);
+
+
+    $row = mysqli_fetch_array($result);
+    $shop = $row["shop"];
+    ?>
     <div class="row">
         <div class="col-12 text-center">
-            <h2>이곳은 <span class="badge bg-info rounded-pill">동궁찜닭</span> 입니다.</h2>
+            <h2>이곳은 <span class="badge bg-info rounded-pill"><?=$shop?></span> 입니다.</h2>
         </div>
     </div>
 </div>

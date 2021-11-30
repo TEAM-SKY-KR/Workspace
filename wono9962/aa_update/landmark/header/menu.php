@@ -14,7 +14,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://localhost/user">
+        <a class="navbar-brand" href="http://localhost/w/landmark">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -26,35 +26,16 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto fs-5 fw-normal">  <!-- ms-auto: 오른쪽 정렬 / fs-5: 글씨 크기 -->
                 <?php
-                if (isset($_SESSION["username"]) == true) {
+                if (isset($_SESSION["landmark_username"]) == true) {
                     ?>
                     <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"
-                                                      href="http://localhost/user">
+                                                      href="http://localhost/w/landmark">
                             <i class="fas fa-home"></i>
                             <span>메인</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/user/tourlist/tourlist.php">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <span>관광지</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="#"
-                           onclick="window.open('stamp/stamp.php', 'z','width=500, height=500'); return false">
-                            <i class="fas fa-stamp"></i>
-                            <span>스탬프 적립</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="#">
-                            <i class="fas fa-user-check"></i>
-                            <span>내정보</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/logout/user_logout.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/landmark/member/logout/landmark_logout.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그아웃</span>
                         </a>
@@ -63,7 +44,7 @@ session_start();
                 }
                 else{?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/user/member/page/login_check.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/landmark/member/login/landmark_login.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>

@@ -1,16 +1,18 @@
 <?php
-$con=mysqli_connect("172.16.136.200","test","1234","withdaegu");
+$con=mysqli_connect("localhost","test","1234","withdaegu");
 
 
 
-$name = $_POST["name"];
-$explanation= $_POST["text"];
-$phone= $_POST["phone"];
-$address = $_POST["address"];
+$title = $_POST["title"];
+$description= $_POST["description"];
+$address= $_POST["address"];
+$phone = $_POST["phone"];
 
 
 
-mysqli_query($con,"INSERT INTO landmark (name, explanation,phone, address)
-VALUES ('$name', '$explanation','$phone','$address')");
+mysqli_query($con,"INSERT INTO member_user_landmark (title, description,address, phone)
+VALUES ('$title', '$description','$address','$phone')");
+
+echo $title;
 
 ?>

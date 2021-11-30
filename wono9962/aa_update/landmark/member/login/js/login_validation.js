@@ -19,7 +19,7 @@ function post_data() {
     let queryString = $("form[name=user_login_form]").serialize();
     $.ajax({
         type: 'post',
-        url: 'user_login_data.php',
+        url: 'landmark_login_data.php',
         data: queryString,
         dataType: 'text',
         success: function (data) {

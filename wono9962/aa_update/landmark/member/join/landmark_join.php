@@ -63,6 +63,14 @@ include_once "../../header/menu.php";
                             입력해주세요.
                         </div>
                     </div>
+                    <!--매장-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="width: 42px;"><i class="fas fa-store"></i></span>
+                        <input type="text" class="form-control rounded-end" id="landmark" name="landmark" placeholder="관광지이름"
+                               aria-label="pw"
+                               data-sb-validations="required">
+                        <div class="invalid-feedback" data-sb-feedback="pw:required">비밀번호를 입력해주세요.</div>
+                    </div>
                     <!--이메일-->
                     <div class="input-group mb-3">
                         <span class="input-group-text" style="width: 42px;"><i class="fas fa-envelope"></i></span>

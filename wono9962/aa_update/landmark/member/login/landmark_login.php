@@ -11,22 +11,22 @@
 
     <link rel="stylesheet" href="../../css/main.css">
     <?php
-    include_once "../base/b_head.php"
+    include_once "../../base/b_head.php"
     ?>
     <?php
-    if (isset($_SESSION["username"]) == true) {
-        echo "<script>location.href='http://localhost/user/'</script>";
+    if (isset($_SESSION["landmark_username"]) == true) {
+        echo "<script>location.href='http://localhost/w/landmark/'</script>";
     }
     ?>
 
 </head>
 <body>
 <?php
-include_once "../header/menu.php";
+include_once "../../header/menu.php";
 ?>
 <div class="container">
     <div class="row mb-2">
-        <div class="col-2 mt-2 mx-auto">
+        <div class="col-12 col-lg-2 mt-2 mx-auto">
             <div class="rounded-3 bg-danger text-center text-white mx-3 py-1 px-1">관광지용</div>
         </div>
     </div>
@@ -62,7 +62,7 @@ include_once "../header/menu.php";
                 </form>
                 <div class="col-xl-12 text-center">
                 <span><a class="fw-bold" style="text-decoration: none;"
-                         href="../join/user_join.php">아직 회원이 아니신가요?</a></span>
+                         href="../join/landmark_join.php">아직 회원이 아니신가요?</a></span>
                 </div>
             </div>
         </div>
