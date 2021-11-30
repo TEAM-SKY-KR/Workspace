@@ -39,7 +39,7 @@ function current_date() {
     let now = new Date();	// 현재 날짜 및 시간
     let month = now.getMonth() + 1;	// 월
     let date = now.getDate(); // 일
-    date_now.innerHTML = month + "월" + date + "일" + " 오늘의 사용자 수는 00명 입니다!";
+    date_now.innerHTML = month + "월" + date + "일" + " 오늘의 방문자 수는 00명 입니다!";
     date_now_date.innerHTML = date + "일";
 
 }

@@ -71,8 +71,8 @@ include_once "../base/setup.php";
                     <li class="page-item disabled">
                         <a class="page-link">Previous</a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="http://localhost/w/user/tourlist/tourlist.php?page=1">1</a></li>
-                    <li class="page-item"><a class="page-link" href="http://localhost/w/user/tourlist/tourlist.php?page=2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.168.0.88/w/user/tourlist/tourlist.php?page=1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.168.0.88/w/user/tourlist/tourlist.php?page=2">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item">
                         <a class="page-link" href="#">Next</a>

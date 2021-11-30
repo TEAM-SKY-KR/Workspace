@@ -41,6 +41,8 @@
                     <th scope="col" class="text-center">장소</th>
                     <th scope="col" class="text-center">스탬프</th>
                     <th scope="col" class="text-center">날짜</th>
+                    <th scope="col" class="text-center">사용여부</th>
+                    <th scope="col" class="text-center">사용처</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -58,6 +60,8 @@
                             <td class="text-center"><?= $row["landmark"] ?></td>
                             <td class="text-center"><i class="fas fa-stamp"></i></td>
                             <td class="text-center"><?= $row["time"] ?></td>
+                            <td class="text-center"><?= $row["use_check"] ?></td>
+                            <td class="text-center"><?= $row["use_where"] ?></td>
                         </tr>
                         <?php
                         $i = $i+1;

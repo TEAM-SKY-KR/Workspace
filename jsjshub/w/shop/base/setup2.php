@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "192.168.0.88";
 $user = "root";
 $pw = "1234";
 $dbName = "capstoneproject_db";
