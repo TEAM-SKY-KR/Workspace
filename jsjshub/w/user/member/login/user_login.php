@@ -15,7 +15,7 @@
     ?>
     <?php
     if (isset($_SESSION["username"]) == true) {
-        echo "<script>location.href='http://localhost/w/user/'</script>";
+        echo "<script>location.href='http://192.168.0.88/w/user/'</script>";
     }
     ?>
 

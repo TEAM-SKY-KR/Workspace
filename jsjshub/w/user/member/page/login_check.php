@@ -26,7 +26,7 @@ include_once "../../header/menu.php";
         <div class="col-lg-5 mx-auto">
             <div class="p-3">
                 <div class="d-flex justify-content-around">
-                    <a href="http://localhost/w/user/member/login/user_login.php" class="text-decoration-none">
+                    <a href="http://192.168.0.88/w/user/member/login/user_login.php" class="text-decoration-none">
                         <div class="mb-3 pt-4 pe-5 ps-5 pb-1 btn-outline-dark rounded-3">
                             <i class="fas fa-users fa-5x"></i>
                             <p><h4 class="ms-4 mt-4">일반</h4></p>

@@ -33,8 +33,18 @@ include_once "../shop/header/menu.php";
 ?>
 <?php
 if (isset($_SESSION["shop_username"]) == false) {
-    echo "<script>location.href='http://localhost/w/shop/member/login/shop_login.php'</script>";
+    echo "<script>location.href='http://192.168.0.88/w/shop/member/login/shop_login.php'</script>";
 }
+?>
+<?php
+include_once "base/setup.php";
+$id = $_SESSION["shop_username"];
+$sql = "SELECT * FROM member_shop WHERE username = '$id'";
+$result = mysqli_query($conn, $sql);
+
+
+$row = mysqli_fetch_array($result);
+$shop = $row["shop"];
 ?>
 <div class="container">
     <div class="row ms-4">
@@ -63,20 +73,10 @@ if (isset($_SESSION["shop_username"]) == false) {
     <div class="row">
         <div class="col-12">
             <img class="mx-auto d-block"
-                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://www.naver.com" alt=""
+                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://192.168.0.88/w/user/qr/shop_qr.php?shop=<?=$shop?>" alt=""
                  style="width:545px; height:545px;">
         </div>
     </div>
-    <?php
-    include_once "base/setup.php";
-    $id = $_SESSION["shop_username"];
-    $sql = "SELECT * FROM member_shop WHERE username = '$id'";
-    $result = mysqli_query($conn, $sql);
-
-
-    $row = mysqli_fetch_array($result);
-    $shop = $row["shop"];
-    ?>
     <div class="row">
         <div class="col-12 text-center">
             <h2>이곳은 <span class="badge bg-info rounded-pill"><?=$shop?></span> 입니다.</h2>
