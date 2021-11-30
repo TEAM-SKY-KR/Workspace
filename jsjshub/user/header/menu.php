@@ -40,7 +40,7 @@ session_start();
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://localhost/user/tourlist/tourlist.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/user/tourlist/tourlist.php?page=1">
                             <i class="fas fa-map-marked-alt"></i>
                             <span>관광지</span>
                         </a>
