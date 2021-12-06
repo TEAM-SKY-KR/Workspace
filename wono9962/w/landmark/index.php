@@ -33,33 +33,12 @@ include_once "header/menu.php";
 ?>
 <?php
 if (isset($_SESSION["landmark_username"]) == false) {
-    echo "<script>location.href='http://192.168.0.88/w/landmark/member/login/landmark_login.php'</script>";
+    echo "<script>location.href='http://localhost/w/landmark/member/login/landmark_login.php'</script>";
 }
 ?>
-<?php
-include_once "base/setup.php";
-$id = $_SESSION["landmark_username"];
-$sql = "SELECT * FROM member_landmark WHERE username = '$id'";
-$result = mysqli_query($conn, $sql);
-
-$row = mysqli_fetch_array($result);
-$landmark = $row["landmark"];
-
-
-?>
 <div class="container">
-    <div class="row ms-4">
-        <div class="col-6 mt-3 mx-auto">
-            <!--            <h2 id="clock"></h2>-->
-            <div class="d-flex">
-                <h3><span class="badge bg-danger" id="date_now_date"></span></h3>
-                <h2>&nbspWith Daegu!</h2>
-            </div>
-            <h2 id="date_now"></h2>  <!--오늘의 사용자 수는 00명 입니다! : 오늘 위드대구 QR을 찍은 사람의 수-->
-        </div>
-    </div>
     <div class="row">
-        <div class="col-4 mb-2 mx-auto">
+        <div class="col-4 mb-2 mt-2 mx-auto">
             <div class="border bg-danger rounded text-white">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex ms-4">
@@ -71,16 +50,50 @@ $landmark = $row["landmark"];
             </div>
         </div>
     </div>
+    <?php
+    include_once "base/setup.php";
+    $id = $_SESSION["landmark_username"];
+    $sql = "SELECT * FROM member_landmark WHERE username = '$id'";
+    $result = mysqli_query($conn, $sql);
+
+
+    $row = mysqli_fetch_array($result);
+    $landmark = $row["landmark"];
+    ?>
     <div class="row">
-        <div class="col-12">
-            <img class="mx-auto d-block"
-                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://192.168.0.88/w/user/qr/landmark_qr.php?landmark=<?=$landmark?>" alt=""
-                 style="width:545px; height:545px;">
+        <div class="col-12 mb-2 text-center text-dark">
+            <h3>어서와요! 이곳은 <span class="badge bg-warning text-dark"><?= $landmark ?></span>입니다!</h3>
+            <h5>아래에 있는 QR을 인식하고, 스탬프를 모아서 상권도 살리고 할인도 받아요!</h5>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
-            <h2>이곳은 <span class="badge bg-danger rounded-pill"><?= $landmark ?></span> 입니다.</h2>
+        <div class="col-6">
+            <img class="mx-auto d-block"
+                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://www.naver.com" alt=""
+                 style="width:545px; height:545px;">
+        </div>
+        <div class="col-6">
+            <div style="align-items: center">
+                <a href="https://www.youtube.com/embed/w6X0b2ESKi4" target="iframe1" style="text-decoration-line: none"/>
+                <!--iframe으로 youtube영상 가져오는 법: 영상 클릭-공유-퍼가기-iframe태그 복사-밑에 붙여넣기-->
+                <!--autoplay=1 : 자동재생 /  &mute=1 : 음소거  | 크롬에서는 음소거를 해야 자동재생이 작동함-->
+
+                <!--iframe 안에 class="mx-auto d-block" name="iframe1" style="width:545px; height:545px;" 이거 넣고 width, height, title, frameborder 삭제하기 / src에 맨끝에 ?autoplay=1&mute=1 추가하면 자동재생&음소거-->
+                <iframe class="mx-auto d-block" name="iframe1" style="width:545px; height:545px;"
+                        src="https://www.youtube.com/embed/SdR-zjovDhQ?autoplay=1&mute=1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row ms-4 mt-1 text-black">
+        <div class="col-6 mt-1 mx-auto">
+            <!--            <h2 id="clock"></h2>-->
+            <div class="d-flex">
+                <h3><span class="badge bg-danger" id="date_now_date"></span></h3>
+                <h2>&nbspWith Daegu!</h2>
+            </div>
+            <h2 id="date_now"></h2>  <!--오늘의 사용자 수는 00명 입니다! : 오늘 위드대구 QR을 찍은 사람의 수-->
         </div>
     </div>
 </div>
