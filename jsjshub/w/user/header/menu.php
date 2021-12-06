@@ -14,7 +14,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://192.168.0.88/w/user">
+        <a class="navbar-brand" href="http://localhost/w/user">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -29,7 +29,7 @@ session_start();
                 if (isset($_SESSION["username"]) == true) {
                     ?>
 <!--                    <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"-->
-<!--                                                      href="http://192.168.0.88/w/user">-->
+<!--                                                      href="http://localhost/w/user">-->
 <!--                            <i class="fas fa-home"></i>-->
 <!--                            <span>메인</span>-->
 <!--                        </a>-->
@@ -41,20 +41,20 @@ session_start();
                     </li>
 <!--                    <input type="file" accept="image/*" capture="camera">-->
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/user/tourlist/tourlist.php?page=1">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/user/tourlist/tourlist.php?page=1">
                             <i class="fas fa-map-marked-alt"></i>
                             <span>관광지</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
                         <a class="nav-link py-3 text-light" href="#"
-                           onclick="window.open('http://192.168.0.88/w/user/stamp/stamp.php', 'z','width=1000, height=500'); return false">
+                           onclick="window.open('http://localhost/w/user/stamp/stamp.php', 'z','width=1000, height=500'); return false">
                             <i class="fas fa-stamp"></i>
                             <span>스탬프 적립</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/user/member/logout/user_logout.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/user/member/logout/user_logout.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그아웃</span>
                         </a>
@@ -63,7 +63,7 @@ session_start();
                 } else {
                     ?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/user/member/login/user_login.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/user/member/login/user_login.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>

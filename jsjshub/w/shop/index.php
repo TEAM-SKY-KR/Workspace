@@ -33,7 +33,7 @@ include_once "../shop/header/menu.php";
 ?>
 <?php
 if (isset($_SESSION["shop_username"]) == false) {
-    echo "<script>location.href='http://192.168.0.88/w/shop/member/login/shop_login.php'</script>";
+    echo "<script>location.href='http://localhost/w/shop/member/login/shop_login.php'</script>";
 }
 ?>
 <?php
@@ -73,7 +73,7 @@ $shop = $row["shop"];
     <div class="row">
         <div class="col-12">
             <img class="mx-auto d-block"
-                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://192.168.0.88/w/user/qr/shop_qr.php?shop=<?=$shop?>" alt=""
+                 src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=http://localhost/w/user/qr/shop_qr.php?shop=<?=$shop?>" alt=""
                  style="width:545px; height:545px;">
         </div>
     </div>

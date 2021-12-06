@@ -14,7 +14,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://192.168.0.88/w/landmark">
+        <a class="navbar-brand" href="http://localhost/w/landmark">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -29,13 +29,13 @@ session_start();
                 if (isset($_SESSION["landmark_username"]) == true) {
                     ?>
                     <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"
-                                                      href="http://192.168.0.88/w/landmark">
+                                                      href="http://localhost/w/landmark">
                             <i class="fas fa-home"></i>
                             <span>메인</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/landmark/member/logout/landmark_logout.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/landmark/member/logout/landmark_logout.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그아웃</span>
                         </a>
@@ -44,7 +44,7 @@ session_start();
                 }
                 else{?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/landmark/member/login/landmark_login.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/landmark/member/login/landmark_login.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>

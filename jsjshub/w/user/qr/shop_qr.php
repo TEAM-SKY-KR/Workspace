@@ -17,7 +17,7 @@
                 timer: 700
             })
             setTimeout(function () {
-                location.replace("http://192.168.0.88/w/user/member/login/user_login.php");
+                location.replace("http://localhost/w/user/member/login/user_login.php");
             }, 800);
         }
 
@@ -31,7 +31,7 @@
                 timer: 700
             })
             setTimeout(function () {
-                location.replace("http://192.168.0.88/w/user");
+                location.replace("http://localhost/w/user");
             }, 800);
         }
     </script>

@@ -33,7 +33,7 @@ include_once "header/menu.php";
 ?>
 <?php
 if (isset($_SESSION["landmark_username"]) == false) {
-    echo "<script>location.href='http://192.168.0.88/w/landmark/member/login/landmark_login.php'</script>";
+    echo "<script>location.href='http://localhost/w/landmark/member/login/landmark_login.php'</script>";
 }
 ?>
 <?php

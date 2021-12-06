@@ -14,7 +14,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://192.168.0.88/w/shop">
+        <a class="navbar-brand" href="http://localhost/w/shop">
             <span class="fw-bolder text-light">위드 대구</span>
         </a>
         <button class="navbar-toggler fw-bolder text-white rounded" type="button"
@@ -29,7 +29,7 @@ session_start();
                 if (isset($_SESSION["shop_username"]) == true) {
                     ?>
 <!--                    <li class="nav-item py-2 px-2"><a class="nav-link py-3 rounded text-light"-->
-<!--                                                      href="http://192.168.0.88/w/user">-->
+<!--                                                      href="http://localhost/w/user">-->
 <!--                            <i class="fas fa-home"></i>-->
 <!--                            <span>메인</span>-->
 <!--                        </a>-->
@@ -40,7 +40,7 @@ session_start();
                         </a>
                     </li>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/shop/member/logout/shop_logout.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/shop/member/logout/shop_logout.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그아웃</span>
                         </a>
@@ -49,7 +49,7 @@ session_start();
                 } else {
                     ?>
                     <li class="nav-item py-2 px-2">
-                        <a class="nav-link py-3 text-light" href="http://192.168.0.88/w/shop/member/login/shop_login.php">
+                        <a class="nav-link py-3 text-light" href="http://localhost/w/shop/member/login/shop_login.php">
                             <i class="fas fa-user-check"></i>
                             <span>로그인</span>
                         </a>

@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("192.168.0.88","test","1234","withdaegu");
+$con=mysqli_connect("localhost","test","1234","withdaegu");
 
 
 
