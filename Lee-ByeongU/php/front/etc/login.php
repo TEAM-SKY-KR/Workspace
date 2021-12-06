@@ -9,15 +9,15 @@
     <!-- validation check -->
     <script src="js/validation_check.js"></script>
 
-    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <?php
-    include_once "../../base/b_head.php"
+    include_once "../base/b_head.php"
     ?>
 
 </head>
 <body>
 <?php
-include_once "../../header/menu.php";
+include_once "../header/menu.php";
 ?>
 <div class="container">
     <div class="row mb-2">
